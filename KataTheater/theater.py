@@ -11,9 +11,9 @@ class Theater:
     def get_row_length(self, row_id: int) -> int:
         return len(self.seats[row_id])
 
-    def seat_score(self, row_id: int, seat_id: int) -> float:
-        row_length = self.get_row_length(row_id)
-        distance_to_middle = abs((row_length-1) / 2 - seat_id)
+    def seat_score(self, row: int, seat: int) -> float:
+        row_length = self.get_row_length(row)
+        distance_to_middle = abs((row_length-1) / 2 - seat)
         return distance_to_middle
 
     def compute_seat_scores(self):
